@@ -9,3 +9,71 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio
 */
+
+@font-face {
+    font-family: 'Weber Hand';
+    src: url('fonts/WeberHandITCStd-BoldCond.otf');
+}
+
+* {
+    font-family: inherit;
+    color: inherit;
+}
+
+html {
+    font-family: "Weber Hand", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 125%;
+    line-height: 1.5;
+    color: #444;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.category-heading {
+    text-align: center;
+}
+
+.listings {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.portfolio-listing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: default;
+    padding: 0.5em;
+    flex: 0 0 25%;
+    transition: opacity 0.1s color 0.1s;
+}
+
+.portfolio-listing:hover {
+    color: #ec4a93;
+    cursor: pointer;
+}
+
+.portfolio-listing:hover img {
+    opacity: 0.8;
+}
+
+.portfolio-listing img {
+    object-fit: cover;
+    max-height: 230px;
+    min-height: 230px;
+}

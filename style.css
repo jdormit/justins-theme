@@ -38,12 +38,42 @@ body {
     margin: auto;
 }
 
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5em 0 0.5em;
+}
+
+.menu {
+    display: flex;
+    align-items: flex-start;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    float: left;
+    padding-right: 1em;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #ec4a93;
+}
+
 .category-heading {
     text-align: center;
 }
 
 .listings {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -74,6 +104,10 @@ body {
 
 .portfolio-listing img {
     object-fit: cover;
-    max-height: 230px;
-    min-height: 230px;
+    width: 230px;
+    height: 230px;
+}
+
+.image-heading {
+    margin-bottom: 0;
 }

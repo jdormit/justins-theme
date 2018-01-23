@@ -24,18 +24,13 @@ $category = new WP_Query($args);
 <?php if ($category->have_posts()): ?>
 <?php while ($category->have_posts()): $category->the_post() ?>
 
-<?php
-if (has_post_thumbnail()):
-    // TODO figure out how to make this an actual thumbnail instead of the full-size image
-    $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'portfolio-thumbnail', true)[0];
-else:
-    // TODO add fallback image
-endif;
-?>
 <a class="portfolio-listing" href="TODO">
     <h4 class="image-heading"><?php the_title(); ?></h4>
-    <img class="portfolio-listing" src="<?php echo esc_url($image) ?>" width="230px" height="230px">
+    <?php if (has_post_thumbnail()): ?>
+    <?php the_post_thumbnail('listing-thumb') ?>
+    <?php endif; ?>
 </a>
+
 <?php endwhile; ?>
 <?php endif; ?>
 

@@ -19,12 +19,14 @@ foreach ($terms as $term):
 ?>
 <?php if ($query->have_posts()): ?>
 <?php while ($query->have_posts()): $query->the_post(); ?>
-<a class="category-listing" href="<?php echo $term_link; ?>">
-    <h4 class="category-heading"><?php echo $term_name; ?></h4>
-    <?php if (has_post_thumbnail()): ?>
-    <?php the_post_thumbnail('category-thumb') ?>
-    <?php endif; ?>
-</a>
+<div class="category-listing-container">
+    <a class="category-listing" href="<?php echo $term_link; ?>">
+        <h4 class="category-heading"><?php echo $term_name; ?></h4>
+        <?php if (has_post_thumbnail()): ?>
+        <?php the_post_thumbnail('category-thumb') ?>
+        <?php endif; ?>
+    </a>
+</div>
 <?php endwhile; ?>
 <?php endif; ?>
 <?php endforeach; ?>

@@ -9,6 +9,6 @@
         <div class="container">
             <header class="pageHeader">
                 <?php the_custom_logo(); ?>
-                <?php wp_nav_menu(['theme_location' => 'header_menu']); ?>
+                <?php wp_nav_menu(['theme_location' => 'header_menu', 'container_class' => 'menu']); ?>
             </header>
 

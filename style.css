@@ -98,7 +98,7 @@ a:focus {
     align-items: flex-start;
 }
 
-.portfolio-listing {
+.portfolio-listing, .category-listing {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,16 +106,23 @@ a:focus {
     text-decoration: none;
     cursor: default;
     padding: 0.5em;
-    flex: 0 0 25%;
     transition: opacity 0.1s color 0.1s;
 }
 
-.portfolio-listing:hover {
+.portfolio-listing {
+    flex: 0 0 25%;
+}
+
+.category-listing {
+    flex: 0 0 50%;
+}
+
+.category-listing:hover, .portfolio-listing:hover {
     color: #ec4a93;
     cursor: pointer;
 }
 
-.portfolio-listing:hover img {
+.portfolio-listing:hover img, .category-listing:hover img {
     opacity: 0.8;
 }
 

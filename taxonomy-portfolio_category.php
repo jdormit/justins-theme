@@ -24,7 +24,7 @@ $category = new WP_Query($args);
 <?php if ($category->have_posts()): ?>
 <?php while ($category->have_posts()): $category->the_post() ?>
 
-<a class="portfolio-listing" href="TODO">
+<a class="portfolio-listing" href="<?php the_permalink(); ?>">
     <h4 class="image-heading"><?php the_title(); ?></h4>
     <?php if (has_post_thumbnail()): ?>
     <?php the_post_thumbnail('listing-thumb') ?>

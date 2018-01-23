@@ -1,13 +1,21 @@
 <?php
 function justins_theme_setup() {
     add_theme_support('custom-logo', [
-        'width' => 100,
-        'height' => 100,
+        'width' => 150,
+        'height' => 150,
         'flex-width' => true
     ]);
     add_theme_support('post-thumbnails');
     add_image_size('listing-thumb', 230, 230, true);
     add_image_size('category-thumb', 400, 400, true);
+    add_filter('image_size_names_to_choose', 'justins_theme_register_image_sizes');
+}
+
+function justins_theme_register_image_sizes($sizes) {
+    return array_merge($sizes, [
+        'listing-thumb' => __('230px square thumbnail'),
+        'category-thumb' => __('400px square thumbnail')
+    ]);
 }
 
 function justins_theme_load_scripts() {

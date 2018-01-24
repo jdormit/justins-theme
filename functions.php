@@ -68,11 +68,6 @@ function justins_theme_customize_register($wp_customize) {
     ]));
 }
 
-function remove_admin_login_header() {
-    remove_action('wp_head', '_admin_bar_bump_cb');
-}
-
-add_action('get_header', 'remove_admin_login_header');
 add_action('after_setup_theme', 'justins_theme_setup');
 add_action('wp_enqueue_scripts', 'justins_theme_load_scripts');
 add_action('customize_register', 'justins_theme_customize_register');

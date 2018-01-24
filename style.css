@@ -146,6 +146,12 @@ a:focus {
     height: 230px;
 }
 
+.category-listing img {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}
+
 .image-heading {
     margin-bottom: 0;
 }

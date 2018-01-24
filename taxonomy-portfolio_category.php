@@ -5,7 +5,7 @@ $term_slug = get_query_var('term');
 $term = get_term_by('slug', $term_slug, 'portfolio_category');
 ?>
 
-<h1 class="category-heading"><?php echo $term->name ?></h1>
+<h2><?php echo $term->name ?></h2>
 
 <?php
 $args = [

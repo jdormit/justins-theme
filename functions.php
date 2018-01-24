@@ -18,6 +18,7 @@ function justins_theme_setup() {
     add_image_size('category-thumb', 400, 400, true);
     add_image_size('display', 720, 720);
     add_filter('image_size_names_choose', 'justins_theme_register_image_sizes');
+    add_theme_support('title-tag');
 }
 
 function justins_theme_load_scripts() {
@@ -46,6 +47,25 @@ function justins_theme_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'copyright_end', [
         'label' => "Copyright end date or year (defaults to current year)",
         'section' => 'title_tagline'
+    ]));
+    $wp_customize->add_section('look_and_feel', [
+        'title' => 'Look and Feel',
+        'priority' => 30
+    ]);
+    $wp_customize->add_setting('font', [
+        'default' => 'Helvetica, Arial, sans-serif'
+    ]);
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'font', [
+        'label' => "Font",
+        'type' => 'select',
+        'section' => 'look_and_feel',
+        'choices' => [
+            '"Weber Hand", "Helvetica Neue", Helvetica, Arial, sans-serif' => 'Weber Hand',
+            'Helvetica, Arial, sans-serif' => 'Helvetica',
+            'Arial, sans-serif' => 'Arial',
+            '"Times New Roman", serif' => 'Times New Roman',
+            'Palatino, serif' => 'Palatino'
+        ]
     ]));
 }
 

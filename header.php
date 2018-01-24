@@ -4,6 +4,11 @@
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php wp_head(); ?>
+        <style type="text/css">
+         html {
+             font-family: <?php echo get_theme_mod('font'); ?>;
+         }
+        </style>
     </head>
     <body>
         <div class="container">

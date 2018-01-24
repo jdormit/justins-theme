@@ -21,7 +21,6 @@ Tags: portfolio
 }
 
 html {
-    font-family: "Weber Hand", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 125%;
     line-height: 1.5;
     color: #444;
@@ -154,6 +153,12 @@ a:focus {
 
 .image-heading {
     margin-bottom: 0;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /* =WordPress Core

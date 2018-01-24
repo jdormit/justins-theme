@@ -22,8 +22,9 @@ function justins_theme_setup() {
 }
 
 function justins_theme_load_scripts() {
-    wp_enqueue_style('justins_theme_style', get_stylesheet_uri());
     wp_enqueue_style('normalize', get_theme_file_uri('/css/normalize.css'));
+    wp_enqueue_style('fonts', get_theme_file_uri('/css/fonts.css'));
+    wp_enqueue_style('justins_theme_style', get_stylesheet_uri());
 }
 
 function justins_theme_init() {
@@ -53,7 +54,7 @@ function justins_theme_customize_register($wp_customize) {
         'priority' => 30
     ]);
     $wp_customize->add_setting('font', [
-        'default' => 'Helvetica, Arial, sans-serif'
+        'default' => '"Fira Sans", Helvetica, Arial, sans-serif'
     ]);
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'font', [
         'label' => "Font",
@@ -61,10 +62,8 @@ function justins_theme_customize_register($wp_customize) {
         'section' => 'look_and_feel',
         'choices' => [
             '"Weber Hand", "Helvetica Neue", Helvetica, Arial, sans-serif' => 'Weber Hand',
-            'Helvetica, Arial, sans-serif' => 'Helvetica',
-            'Arial, sans-serif' => 'Arial',
-            '"Times New Roman", serif' => 'Times New Roman',
-            'Palatino, serif' => 'Palatino'
+            '"Fira Sans", Helvetica, Arial, sans-serif' => 'Fira Sans',
+            '"Noto Serif", "Times New Roman", serif' => 'Noto Serif'
         ]
     ]));
 }

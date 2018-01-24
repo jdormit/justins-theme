@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<h1><?php echo get_bloginfo('title'); ?></h1>
+<h2><?php echo get_bloginfo('title'); ?></h2>
 
 <div class="listings">
 

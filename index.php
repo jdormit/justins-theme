@@ -5,7 +5,6 @@
     <h3 class="caption"><?php echo get_bloginfo('description'); ?></h3>
 
     <div class="posts">
-        <h2>Blog Posts</h2>
         <?php if (have_posts()): ?>
             <?php while (have_posts()): the_post(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

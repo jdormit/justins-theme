@@ -23,7 +23,7 @@ function justins_theme_setup() {
 
 function justins_theme_load_scripts() {
     wp_enqueue_style('justins_theme_style', get_stylesheet_uri());
-    wp_enqueue_style('grid', get_theme_file_uri('/css/grid.css'));
+    wp_enqueue_style('normalize', get_theme_file_uri('/css/normalize.css'));
 }
 
 function justins_theme_init() {

@@ -16,8 +16,7 @@ Tags: portfolio
 }
 
 * {
-    font-family: inherit;
-    color: inherit;
+    box-sizing: border-box;
 }
 
 html {
@@ -79,6 +78,7 @@ a:focus {
 
 .menu a {
     text-decoration: none;
+    color: #444;
 }
 
 .menu a:hover {
@@ -120,6 +120,7 @@ a:focus {
     text-decoration: none;
     cursor: default;
     transition: opacity 0.1s color 0.1s;
+    color: #444;
 }
 
 .portfolio-listing {
@@ -159,6 +160,7 @@ a:focus {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 60%;
 }
 
 /* =WordPress Core

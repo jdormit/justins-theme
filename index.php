@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<h1><?php echo get_bloginfo('title'); ?></h1>
+
 <div class="listings">
 
 <?php

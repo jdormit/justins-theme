@@ -54,7 +54,7 @@ function justins_theme_customize_register($wp_customize) {
         'priority' => 30
     ]);
     $wp_customize->add_setting('font', [
-        'default' => '"Fira Sans", Helvetica, Arial, sans-serif'
+        'default' => '"Open Sans", Helvetica, Arial, sans-serif'
     ]);
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'font', [
         'label' => "Font",
@@ -62,7 +62,7 @@ function justins_theme_customize_register($wp_customize) {
         'section' => 'look_and_feel',
         'choices' => [
             '"Weber Hand", "Helvetica Neue", Helvetica, Arial, sans-serif' => 'Weber Hand',
-            '"Fira Sans", Helvetica, Arial, sans-serif' => 'Fira Sans',
+            '"Open Sans", Helvetica, Arial, sans-serif' => 'Open Sans',
             '"Noto Serif", "Times New Roman", serif' => 'Noto Serif'
         ]
     ]));

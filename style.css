@@ -173,14 +173,10 @@ pre, code {
 
 .portfolio-listing img {
     object-fit: cover;
-    width: 230px;
-    height: 230px;
 }
 
 .category-listing img {
     object-fit: cover;
-    width: 400px;
-    height: 400px;
 }
 
 .image-heading, .category-heading {
@@ -215,6 +211,7 @@ pre, code {
 @media only screen and (max-width: 720px) {
     .category-listing-container, .portfolio-listing-container {
         flex: 0 0 100%;
+        max-width: 100%;
     }
 
     .listings {
